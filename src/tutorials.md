@@ -7,7 +7,7 @@ pagination:
     alias: posts_set
 ---
 
-# Tutorials
+<h1>Tutorials</h1>
 
 {%- for post in posts_set -%}
 <div class="post">
@@ -31,12 +31,10 @@ pagination:
     </li>
   {%- endif -%}
 
-  {% set page_index = 1 %}
   {%- for page in pagination.hrefs -%}
     <li>
-        <a href="{{ page }}">{{ page_index }}</a>
+        <a href="{{ page }}">{{ page }}</a>
     </li>
-    {% set page_index = page_index + 1 %}
   {%- endfor -%}
 
   {%- if pagination.href.next -%}
